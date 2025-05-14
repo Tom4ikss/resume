@@ -4,9 +4,8 @@ import CopySnackbarComponent from './CopySnackbarComponent'
 
 function App() {
 
-  const copy1 = useRef(null)
-  const copy2 = useRef(null)
-  const copy3 = useRef(null)
+
+  const COPY = [useRef(null), useRef(null), useRef(null)]
 
   const contactsRef = useRef(null)
 
@@ -34,14 +33,13 @@ function App() {
       <div className="max-w-5xl mx-auto bg-gray-800 rounded-2xl p-8 md:p-16 shadow-[0px_0px_25px_3px_rgba(49,65,88,0.5)]">
         <h1 className="text-4xl font-bold text-blue-100 mb-4">Шаов Артем</h1>
         <p className="text-lg text-blue-200 mb-8">Frontend Junior Developer</p>
-
         <section className="mb-10 rounded-xl p-6 transition duration-500 bg-white hover:inset-shadow-sm hover:inset-shadow-gray-900 ">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Контакты</h2>
           <ul className="text-gray-700 space-y-2">
-            <li ref={copy1} className="cursor-pointer hover:text-cyan-700 transition-colors duration-200"><a target="_blank" rel="noopener noreferrer" href='https://mail.yandex.ru/'>Email: tom4iksharf@gmail.com</a><CopySnackbarComponent elementRef={copy1} text={'tom4iksharf@gmail.com'}/></li>
-            <li ref={copy2} className="cursor-pointer hover:text-cyan-700 transition-colors duration-200">Телефон: +7 (927) 567-05-79<CopySnackbarComponent elementRef={copy2} text={'89275670579'}/></li>
+            <li ref={COPY[0]} className="cursor-pointer hover:text-cyan-700 transition-colors duration-200"><a target="_blank" rel="noopener noreferrer" href='https://mail.yandex.ru/'>Email: tom4iksharf@gmail.com</a><CopySnackbarComponent elementRef={COPY[0]} text={'tom4iksharf@gmail.com'}/></li>
+            <li ref={COPY[1]} className="cursor-pointer hover:text-cyan-700 transition-colors duration-200">Телефон: +7 (927) 567-05-79<CopySnackbarComponent elementRef={COPY[1]} text={'89275670579'}/></li>
             <li ref={contactsRef} className="cursor-pointer hover:text-cyan-700 transition-colors duration-200"><a target="_blank" rel="noopener noreferrer" href='https://github.com/Tom4ikss'>GitHub: github.com/Tom4ikss</a></li>
-            <li ref={copy3} className="cursor-pointer hover:text-cyan-700 transition-colors duration-200">Telegram: @tomkss<CopySnackbarComponent elementRef={copy3} text={'@tomkss'}/></li>
+            <li ref={COPY[2]} className="cursor-pointer hover:text-cyan-700 transition-colors duration-200">Telegram: @tomkss<CopySnackbarComponent elementRef={COPY[2]} text={'@tomkss'}/></li>
           </ul>
         </section>
 
