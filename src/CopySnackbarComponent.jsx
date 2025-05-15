@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
-function CopySnackbarComponent({elementRef, text}) {
+function CopySnackbarComponent({ text, children }) {
     {
 
     const [snackbarVisibility, setSnackbarVisibility] = useState(false)
@@ -19,21 +19,13 @@ function CopySnackbarComponent({elementRef, text}) {
         if(copied) return
         navigator.clipboard.writeText(text).then(showSnackBar())
     } 
-    useEffect(() => {
-        const node = elementRef.current;
-        if (node) {
-        node.addEventListener('click', () => {Copy(text)});
-        }
 
-        return () => {
-        if (node) {
-            node.removeEventListener('click', () => {Copy(text)});
-        }
-        };
-  }, []);
-
-
-    return (<span className={["p-1 rounded-sm bg-gray-800 text-xs text-blue-100 ml-2", snackbarVisibility ? "visible" : "invisible"].join(' ')}>Copied</span>)
+    return (
+    <div className="relative flex max-w-fit" onClick={() => Copy(text ?? children.props.children)}>
+        { children }     
+        {snackbarVisibility && <span className="animate-fade-slide-up select-none p-1 rounded-sm bg-gray-800 text-xs text-blue-100 ml-2">Copied</span>}
+    </div>
+    )
 }
 }
 
