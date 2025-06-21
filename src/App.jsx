@@ -2,6 +2,8 @@ import './App.css'
 import CopySnackbarComponent from './CopySnackbarComponent'
 import useScrollAndSelection from './useScrollAndSelection'
 
+
+
 function App() {
 
   const {ref: contactsRef, scrollToAndSelect: scrollToContacts} = useScrollAndSelection()
@@ -58,14 +60,16 @@ function App() {
         <section className="mb-10 bg-white rounded-xl p-6 transition duration-500  hover:inset-shadow-sm hover:inset-shadow-gray-900">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Опыт работы</h2>
           <div className="space-y-6">
-            Весь опыт работы, который у меня был - это различные проекты, которые я делал для изучения новых технологий и подкрепления имеющихся теоретичиских навыков практикой, часть из них есть на GitHub (<span className='whitespace-nowrap text-cyan-700 cursor-pointer' onClick={scrollToContacts} role='button'>см. Контакты</span>)
+            Весь опыт работы, который у меня был - это различные проекты, которые я делал для изучения новых технологий и подкрепления имеющихся теоретичиских навыков практикой, часть из них есть на GitHub (<span className='whitespace-nowrap group cursor-pointer text-cyan-700 transition-all duration-300 ease-in-out' onClick={scrollToContacts} role='button'><span className="bg-left-bottom bg-gradient-to-r from-cyan-700 to-cyan-700 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">см. Контакты</span></span>)
           </div>
         </section>
 
         <section className="hover:bg-indigo-50 rounded-xl p-4 bg-white rounded-xl p-6 transition duration-500  hover:inset-shadow-sm hover:inset-shadow-gray-900">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Образование</h2>
-          <p className="text-gray-700">Бакалавриат, Информационная безопасность, <a className='text-cyan-700 cursor-pointer' target="_blank" rel="noopener noreferrer" href='https://www.fa.ru/'>Финансовый Университет</a>, 2024–2029</p>
+          <p className="text-gray-700">Бакалавриат, Информационная безопасность, <a className="group cursor-pointer text-cyan-700 transition-all duration-300 ease-in-out" target="_blank" rel="noopener noreferrer" href='https://www.fa.ru/'><span className="bg-left-bottom bg-gradient-to-r from-cyan-700 to-cyan-700 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">Финансовый Университет</span></a>, 2024–2029</p>
         </section>
+
+        <footer className="text-blue-200 mb-8 mt-6">* Если вы смотрите это резюме в pdf лучше откройте его по <a className="group cursor-pointer text-cyan-600 transition-all duration-300 ease-in-out" href="https://tom4ikss.github.io/resume/"><span className="bg-left-bottom bg-gradient-to-r from-cyan-600 to-cyan-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">ссылке</span></a>.</footer>
       </div>
     </div>
     </>
