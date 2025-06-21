@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-const url = 'http://localhost:5173'; // замени на адрес твоего локального сервера
+const url = 'http://localhost:5173';
 
 const browser = await puppeteer.launch();
 const page = await browser.newPage();

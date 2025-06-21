@@ -12,7 +12,7 @@ function App() {
       
       <div className="max-w-5xl mx-auto bg-gray-800 rounded-2xl p-8 md:p-16 shadow-[0px_0px_25px_3px_rgba(49,65,88,0.5)]">
         <h1 className="text-4xl font-bold text-blue-100 mb-4">Шаов Артем</h1>
-        <p className="text-lg text-blue-200 mb-8">Frontend Junior Developer</p>
+        <p className="text-lg text-blue-200 mb-8">Junior Web Developer</p>
         <section className="mb-10 rounded-xl p-6 transition duration-500 bg-white hover:inset-shadow-sm hover:inset-shadow-gray-900 ">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Контакты</h2>
           <ul className="text-gray-700 space-y-2">
@@ -32,7 +32,7 @@ function App() {
         <section className="mb-10 bg-white rounded-xl p-6 transition duration-500 hover:inset-shadow-sm hover:inset-shadow-gray-900">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Обо мне</h2>
           <p className="whitespace-pre-line sofia-sans text-gray-700 leading-relaxed hover:text-gray-900 transition-colors">
-            Я - начинающий Frontend-разработчик с хорошей теоретической базой и практическим опытом. Я создаю веб-приложений используя Typescript, CSS, React или Vue.<br/><br/>
+            Я - начинающий Web-разработчик с хорошей теоретической базой и практическим опытом. Я создаю веб-приложений используя Typescript, CSS, React или Vue.<br/><br/>
             Я быстро осваиваю новые инструменты и технологии, умею находить и использовать нужные ресурсы для решения задач, не боюсь задавать вопросы, стремлюсь писать чистый и понятный код, создавать гибкую и расширяемую архитектуру. В работе ценю внимание к деталям, структурированность и коммуникацию.<br/><br/>
 
             Моя главная цель - это профессиональный рост, а также развитие в других сферах IT (в том числе я имею опыт программирования на Rust, Python, NASM). Меня вдохновляет идея работать в команде, где можно не только развиваться, но и приносить реальную пользу.<br/><br/>
